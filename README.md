@@ -25,6 +25,8 @@ flowchart TD
       HK[Hotel Keys]
       AK[Automobile Keys]
     end
+    subgraph CK[Cryptographic Keys]
+    end
   end
   subgraph S[Storage]
     ES[Encrypted Storage]
