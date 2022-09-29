@@ -6,6 +6,16 @@ This task force is intended to deliver a reference architecture for what the Ope
 %%{ init: { 'flowchart': { 'curve': 'linear' } } }%%
 flowchart TD
   subgraph P[Protocols]
+    pD[Deposit]
+    pW[Withdrawal]
+    pP[Purchase]
+    pR[Refund]
+    pPP[Present Proof]
+    pT[Transfer]
+    pS[Send]
+    pR1[Receive]
+    pB[Burn]
+    pTBD["..."]
   end
   subgraph D[Digital Objects]
     subgraph I[Identity]
@@ -26,18 +36,33 @@ flowchart TD
       AK[Automobile Keys]
     end
     subgraph CK[Cryptographic Keys]
+      ckTBD["..."]
+    end
+    subgraph T[Tickets]
+      ET[Event Ticket]
+      TT[Transit Ticket]
+      PT[Plane Ticket]
     end
   end
   subgraph S[Storage]
-    ES[Encrypted Storage]
+    subgraph ES[Encrypted Storage]
+      esLS[Encrypted Local Storage]
+      esCS[Encrypted Cloud Storage]
+      esTBD["..."]
+    end
     subgraph KS[Key Storage]
       TEE[Trusted Execution Environment]
       KV[Software Key Vault]
     end
   end
   subgraph C[Communication Manager]
+    QR[QR Codes]
+    NFC["Near Field Communication (NFC)"]
+    MST["Magnetic Secure Transmission (MST)"]
+    cmTBD["..."]
   end
   subgraph PE[Policy Engine]
+    peTBD["..."]
   end
   S -.- D -.- PE -.- P --> C
 ```
