@@ -4,17 +4,15 @@
 ```mermaid
 %%{ init: { 'flowchart': { 'curve': 'linear' } } }%%
 flowchart TD
-  subgraph P[Protocols]
-    pD[Deposit]
-    pW[Withdrawal]
-    pP[Purchase]
-    pR[Refund]
-    pPP[Present Proof]
-    pT[Transfer]
-    pS[Send]
-    pR1[Receive]
-    pB[Burn]
-    pTBD["..."]
+  subgraph S[Storage]
+    subgraph ES[Encrypted Storage]
+      esLS[Encrypted Local Storage]
+      esCS[Encrypted Cloud Storage]
+    end
+    subgraph KS[Key Storage]
+      TEE[Trusted Execution Environment]
+      KV[Software Key Vault]
+    end
   end
   subgraph D[Digital Objects]
     subgraph I[Identity]
@@ -35,6 +33,7 @@ flowchart TD
       AK[Automobile Keys]
     end
     subgraph CK[Cryptographic Keys]
+      ckKS[Key Share]
       ckTBD["..."]
     end
     subgraph T[Tickets]
@@ -43,25 +42,26 @@ flowchart TD
       PT[Plane Ticket]
     end
   end
-  subgraph S[Storage]
-    subgraph ES[Encrypted Storage]
-      esLS[Encrypted Local Storage]
-      esCS[Encrypted Cloud Storage]
-      esTBD["..."]
-    end
-    subgraph KS[Key Storage]
-      TEE[Trusted Execution Environment]
-      KV[Software Key Vault]
-    end
+  subgraph PE[Policy Engine]
+    peTBD["..."]
+  end
+  subgraph P[Protocols]
+    pD[Deposit]
+    pW[Withdrawal]
+    pP[Purchase]
+    pR[Refund]
+    pPP[Present Proof]
+    pT[Transfer]
+    pS[Send]
+    pR1[Receive]
+    pB[Burn]
+    pTBD["..."]
   end
   subgraph C[Communication Manager]
-    QR[QR Codes]
+    QR[QR Code]
     NFC["Near Field Communication (NFC)"]
     MST["Magnetic Secure Transmission (MST)"]
     cmTBD["..."]
-  end
-  subgraph PE[Policy Engine]
-    peTBD["..."]
   end
   S -.- D -.- PE -.- P --> C
 ```
