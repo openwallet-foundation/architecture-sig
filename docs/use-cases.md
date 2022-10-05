@@ -1,3 +1,5 @@
+![Status](https://img.shields.io/badge/status-draft-important) [![License](https://img.shields.io/badge/license-cc--by--4.0-informational)](http://creativecommons.org/licenses/by/4.0/)
+
 # Use Cases
 This page will document the different use cases where a wallet is expected to be used.
 
