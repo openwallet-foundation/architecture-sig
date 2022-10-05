@@ -28,6 +28,8 @@ classDiagram
       + verify(String kid, Bytes msg, Bytes sig)
     }
     class PublicKey {
+      + List~String~ tags
+      + String description
       + String kid
       + String kty
       + String crv
@@ -47,5 +49,4 @@ classDiagram
 
     KMS <|-- RemoteKMS
     KMS <|-- LocalKMS
-     
 ```
