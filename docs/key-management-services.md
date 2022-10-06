@@ -1,6 +1,6 @@
 # Key Management Services
 
-- [edit live](https://mermaid.live/edit#pako:eNrNU8FugzAM_ZUop6K1_QBUVdq021apGlekKg0us0qSyQloqOu_L2soUMIHjANynp8fz8a5cGkK4CmXlbD2FUVJQuWa-eeGsLddFo6bzfPROhLSbbcD6oOUPbHMEeqSWaAGJRywAO3whEAPrBI0kHDwBu1eIC2ShywqQ25P2ATGYgiTiYrb18cK5R_pjEUytvsByviaXXYJKBvMSaM1SIdGHyTBzaGoBpbFUi86qlddspfWgWXKlslAaoDw1M7T7qEX6iquY2fvRorqPxrrh8lia14oxlwbt0BNhImqjLDvCGmjHuZ861nj_YLMOC8mA5wOrVMaaWx-VqthGCEd3v1SsfV6XBKy9x8bJfutDdK9ygS_1_MlV0BKYOGv462hnLtPUJDz1IeFoHPOc331PFE7k7Va8tRRDUtefxX-o93t5elJVBauv4PCNIA)
+- [edit live](https://mermaid.live/edit)
 
 This document describes generic key management services.
 
