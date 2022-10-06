@@ -34,6 +34,7 @@ classDiagram
       + String kty
       + String crv
       + String alg
+      + List~String~ key_ops
       + String x
       + String y
       + verify(Bytes msg, Bytes sign)
@@ -46,7 +47,6 @@ classDiagram
     
     RemoteKMS ..  PrivateKey
     LocalKMS ..  PrivateKey
-
     KMS <|-- RemoteKMS
     KMS <|-- LocalKMS
 ```
