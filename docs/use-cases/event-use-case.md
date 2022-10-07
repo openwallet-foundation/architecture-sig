@@ -9,7 +9,7 @@ This document covers the typical use cases that would require a wallet when an i
 flowchart LR
   alice
   subgraph uc[Use Cases]
-    uc1[Purchase Ticket(s)]
+    uc1["Purchase Ticket(s)"]
     uc2[Use Ticket]
     uc3[Sell Ticket]
   end
