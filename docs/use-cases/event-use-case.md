@@ -17,9 +17,8 @@ flowchart LR
 ```
 
 ### Purchase Ticket
-|                     |                |
-|---------------------|----------------|
 | **Use Case ID**     | Purchase Ticket |
+|---------------------|----------------|
 | **User Story**      | As an Attendee, I want to purchase a ticket via a Ticket Seller to an event so that I may gain entry to the event at the Event Venue. |
 | **Goal**            | Puchase a ticket so that I can attend an event. |
 | **Actors**          | **Primary:** Attendee  |
