@@ -7,13 +7,13 @@ This document covers the typical use cases that would require a wallet when an i
 ## Use Case Diagram
 ```mermaid
 flowchart LR
-  alice
+  Attendee
   subgraph uc[Use Cases]
     uc1(["Purchase Ticket(s)"])
     uc2([Use Ticket])
     uc3([Sell Ticket])
   end
-  alice-->uc1 & uc2 & uc3
+  Attendee-->uc1 & uc2 & uc3
 ```
 
 ### Purchase Ticket
