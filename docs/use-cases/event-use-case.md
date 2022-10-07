@@ -1,8 +1,8 @@
 # Event Use Case
 
-This document covers the typical use cases that would require a wallet when an individual wants to purchase ticket(s) and attend an event. In this scenario, we have a user Alice that will use a ticket seller's website to browse for ticket(s) to a specific event that they wish to attend. When Alice finds the specific seat(s) that they would like to purchase, they use their wallet to pay for the ticket(s). Upon successful payment, the ticket(s) are added to Alice's wallet. From here, there are two distinct steps that Alice can take:
-1. Attend the event, which will require using the ticket to gain entry into the event venue
-2. Sell the ticket to someone else, which will require transferring the ticket from Alice's wallet to the buyer's wallet
+This document covers the typical use cases that would require a wallet when an individual wants to purchase ticket(s) and attend an event. In this scenario, we have an Attendee that will use a Ticket Seller's website to browse for ticket(s) to a specific event that they wish to attend. When the Attendee finds the specific seat(s) that they would like to purchase, they use their wallet to pay for the ticket(s). Upon successful payment, the ticket(s) are added to the Attendee's wallet. From here, there are two distinct steps that the Attendee can take:
+1. Attend the event, which will require using the ticket to gain entry into the Event Venue
+2. Sell the ticket to someone else, which will require transferring the ticket from the Attendee's wallet to the Buyer's wallet
 
 ## Use Case Diagram
 ```mermaid
