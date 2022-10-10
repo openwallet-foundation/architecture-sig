@@ -49,6 +49,8 @@ sequenceDiagram
   aw->>ts: Transmit payment instructions
   ts->>ts: Validate payment
   alt Valid Payment
+    ts-->>ts: Mark seat(s) sold
+    ts-->>ev: Seat(s) sold details
     ts-->>a: Receipt page
     a->>ts: Save ticket to OWF-powered wallet
     ts-->>aw: Event Ticket
