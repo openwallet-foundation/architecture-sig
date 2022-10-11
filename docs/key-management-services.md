@@ -15,7 +15,7 @@ classDiagram
         <<Abstract>>
         + String service_identifier
         + generateKeyPair(String alg)
-        + imortPrivateKey(PrivateKey k)
+        + importPrivateKey(PrivateKey k)
         + exportPrivateKey(String kid)
         + getPublicKey(String kid)
         + getPublicKeys()
