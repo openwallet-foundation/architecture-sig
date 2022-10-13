@@ -4,6 +4,10 @@ This document covers the typical use cases that would require a wallet when an i
 1. Attend the event, which will require redeeming the ticket to gain entry into the Event Venue
 2. Sell the ticket to someone else, which will require transferring the ticket from the Attendee's wallet to the Buyer's wallet
 
+Potential Complexities:
+* Two people should not be able to utilize the same ticket to gain access to the event.
+* What considerations exist to ensure that the purchaser of the ticket is the one redeeming the ticket? For example, for stolen wallets or high-value tickets.
+
 ## Use Case Diagram
 ```mermaid
 flowchart LR
@@ -41,7 +45,7 @@ flowchart LR
 | **Pre-Conditions**  | 1. The ticket purchaser has a wallet.<br/> 2. The ticket purchaser has purchased a ticket (see _Purchase Ticket_ use case) |
 | **Post-Conditions** | 1. The Attendee's wallet contains the ticket. |
 | **Trigger**         | The Ticket Purchaser clicks the "Save Ticket to OWF-powered Wallet" option on the Ticket Seller's website or email. |
-| **Main Flow**       | 1. The TS system sends the ticket to the Attendee's OWF-powered Wallet. |
+| **Main Flow**       | 1. The TS system sends the ticket to the Attendee's OWF-powered Wallet.<br/> 2. Use Case Ends. |
 | **Exceptions**      | 1. Step 1. The transmission of the ticket from the TS system to the OWF-powered wallet fails. The ticket purchaser must be able to retry to save functionality again or have an alternative way to obtain the ticket. |
 | **Wallet Functionality Needed** | 1. Ability to save a ticket to the wallet. |
 
@@ -62,15 +66,15 @@ flowchart LR
 ### Sell Ticket
 | **Use Case ID**     | Sell Ticket |
 |---------------------|----------------|
-| **User Story**      |                |
-| **Goal**            |                |
-| **Actors**          | **Primary:**   |
-|                     | **Secondary:** |
-| **Pre-Conditions**  |                |
-| **Post-Conditions** |                |
-| **Trigger**         |                |
-| **Main Flow**       |                |
-| **Exceptions**      |                |
+| **User Story**      | As a Ticket Holder, I want to be able to sell my ticket to another person. |
+| **Goal**            | Sell a ticket to a secondary buyer so that they may gain access to the event. |
+| **Actors**          | **Primary:** Ticket Holder (TH), Ticket Buyer (TB)   |
+|                     | **Secondary:** Event Venue (EV) |
+| **Pre-Conditions**  | 1. The TH has a ticket in their wallet. |
+| **Post-Conditions** | 1. The TB has the ticket in their wallet.<br/> 2. The TH no longer has the ticket in their wallet. |
+| **Trigger**         | The TH and TB agree to the terms of the sale. |
+| **Main Flow**       | 1. The TB pays the TH for the ticket.<br/> 2. The TH transfers the ticket to the TB's wallet.<br/> 3. Use Case Ends. |
+| **Exceptions**      | 1. Step 1-2. Both of these steps should be atomic in nature. If one fails, the other should also fail to complete. |
 | **Wallet Functionality Needed** | 1. Ability to view all event tickets in the wallet.<br/> 2. Ability to transfer an event ticket to another wallet. |
 
 ## Overall Sequence Diagram
