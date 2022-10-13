@@ -3,6 +3,7 @@ This task force is intended to deliver a reference architecture for what the Ope
 
 ## Links
 * [Use Cases](./docs/use-cases/use-cases.md)
+  * [Event Use Case](./docs/use-cases/event-use-case.md)
 * [Conceptual Architecture](./docs/architecture/conceptual-architecture.md)
 * [Key Management Services](./docs/architecture/key-management-services.md)
 * [Meeting Details](./meeting-details.md)
