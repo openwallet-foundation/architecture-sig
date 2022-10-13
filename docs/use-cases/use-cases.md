@@ -69,9 +69,9 @@ flowchart LR
   end
   wh-->d & em & ev & h & i & s & t
   evUC1 & evUC4 & sUC1 & tUC1-->p
-  click evUC1 "https://github.com/openwallet-foundation/architecture-task-force/blob/main/docs/use-cases/event-use-case.md#purchase-ticket" "See details"
-  click evUC2 "https://github.com/openwallet-foundation/architecture-task-force/blob/main/docs/use-cases/event-use-case.md#sell-ticket" "See details"
-  click evUC3 "https://github.com/openwallet-foundation/architecture-task-force/blob/main/docs/use-cases/event-use-case.md#use-ticket" "See details"
+  click evUC1 "https://github.com/openwallet-foundation/architecture-task-force/blob/main/docs/use-cases/event-use-case.md#purchase-ticket"
+  click evUC2 "https://github.com/openwallet-foundation/architecture-task-force/blob/main/docs/use-cases/event-use-case.md#sell-ticket"
+  click evUC3 "https://github.com/openwallet-foundation/architecture-task-force/blob/main/docs/use-cases/event-use-case.md#redeem-ticket"
 ```
 
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
