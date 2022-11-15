@@ -1,6 +1,6 @@
 # Verifiable Credentials
 
-```mermai
+```mermaid
 classDiagram
 
 class Controller {
