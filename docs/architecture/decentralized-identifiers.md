@@ -139,7 +139,7 @@ DIDDocument "1" *.. "many" Service
 Service "1" .. "1" DIDUrl
 
 
-DIDResolutionResult "1" .. "many" DIDDocument
+DIDResolutionResult "many" .. "1" DIDDocument
 DIDDocumentMetadata "1" .. "1" DIDResolutionResult
 DIDResolutionMetadata "1" .. "1" DIDResolutionResult
 ResolutionError "1" .. "1" DIDResolutionResult
