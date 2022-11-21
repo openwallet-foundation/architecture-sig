@@ -18,6 +18,11 @@ class DIDUrl {
     dereference()
 }
 
+class ResolutionOptions {
+    <<Abstract>>
+    + String Accept
+}
+
 class DIDDocument {
     <<Abstract>>
     + DID id
@@ -28,7 +33,7 @@ class DIDDocument {
     + List~VerificationMethod~ keyAgreement
     + List~Service~ service
     + create()
-    + resolve() : DIDResolutionResult
+    + resolve(ResolutionOptions options) : DIDResolutionResult
     + update()
     + deactivate()
 }
