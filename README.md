@@ -1,5 +1,5 @@
-# Architecture Task Force
-This task force is intended to deliver a reference architecture for what the OpenWallet Foundation is looking to build.
+# Architecture Special Interest Group
+This special interest group (SIG) is focused on conversations related to the architecture of digital wallet engines and is a sub-group reporting to the [OpenWallet Foundation's Technical Advisory Committee](https://openwallet-foundation.github.io/tac).
 
 ## Links
 * [Use Cases](./docs/use-cases/use-cases.md)

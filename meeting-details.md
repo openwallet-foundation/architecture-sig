@@ -3,7 +3,7 @@
 
 > OpenWallet Zoom is inviting you to a scheduled Zoom meeting.</br>
 > </br>
-> Topic: Outside Architecture Special Interest Group</br>
+> Topic: Architecture Special Interest Group</br>
 > Time: 11:00 AM Pacific Time (US and Canada)</br>
 >         Every week on Mon, until Dec 25, 2023</br>
 > </br>
