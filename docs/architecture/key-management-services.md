@@ -35,7 +35,8 @@ This document describes conceptually the relationship between application and ke
         - `REST` - Some secret management systems use REST APIs to access key management services. [HashiCorp Vault](https://www.vaultproject.io/) is an example of such a system.
         - `Vendor Specific` - Some key management services use vendor specific APIs. [Ledger](https://www.ledger.com/) and [Trezor](https://trezor.io/) are examples of such systems.
         - **`OpenWallet?`** - Perhaps the creation of a **NEW** standard API for key management services is needed. Old standards can be hard to work with modern crypto (i.e BIP32/39/44 derivations paths, EdDSA, Multi-sig schemes, MPC, etc). **OR** adapting or expanding on existing standards to support modern crypto.
-        - `Others` - To be added.
+        - [WebKMS](https://w3c-ccg.github.io/webkms) - Specification published by the [Credentials Community Group](https://www.w3.org/groups/cg/credentials). It is a REST API for key management services.
+        - [Universal Wallet](https://w3c-ccg.github.io/universal-wallet-interop-spec) - JSON-LD representation for interoperability between digital currencies and identity wallets
 
 
 ## Dependence of device manufacturers and operating systems
@@ -55,21 +56,27 @@ A conceptual design such as this does **NOT** try to take into account the speci
     C4Context
         title App & KMS Services relationship
         Person(user, "App user", "End user of a app using OpenWallet")
-        Enterprise_Boundary(b0, "OpenWallet") {
-            System(appSystem, "Application", "Application")
+        Boundary(b0, "Application") {
+            System(app, "Application", "Application")
+            System(owallet, "OpenWallet", "OpenWallet")
+        }
+
+        Boundary(b1, "CloudKMS") {
+            System(remoteKMS, "RemoteKMS", "Key Management System")
+        }
+        
+        Boundary(b2, "LocalKMS") {
             System(localKMS, "LocalKMS", "Key Management System")
         }
 
-        Enterprise_Boundary(b1, "CloudKMS") {
-            System(remoteKMS, "RemoteKMS", "Key Management System")
-        }
+        BiRel(user, app, "uses", "User Input")
+        BiRel(app, owallet, "uses", "Universal API")
+        BiRel(owallet, localKMS, "uses", "PKCS#11")
+        BiRel(owallet, remoteKMS, "uses", "KMIP, WebKMS")
 
-        BiRel(user, appSystem, "uses", "User Input")
-        BiRel(appSystem, localKMS, "uses", "PKCS#11")
-        BiRel(appSystem, remoteKMS, "uses", "KMIP")
-
-        UpdateRelStyle(appSystem, localKMS, $textColor="green", $lineColor="blue", $offsetX="-20")
-        UpdateRelStyle(appSystem, remoteKMS, $textColor="green", $lineColor="blue", $offsetX="20")
+        UpdateRelStyle(app, owallet, $textColor="green", $lineColor="blue", $offsetX="-90")
+        UpdateRelStyle(owallet, localKMS, $textColor="green", $lineColor="blue", $offsetX="-20")
+        UpdateRelStyle(owallet, remoteKMS, $textColor="green", $lineColor="blue", $offsetX="20")
 
         UpdateLayoutConfig($c4ShapeInRow="1", $c4BoundaryInRow="0")
 
