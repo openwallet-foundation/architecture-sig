@@ -30,6 +30,7 @@ This document describes conceptually the relationship between application and ke
     - Examples of standard APIs:
 
         - [PKCS#11](https://en.wikipedia.org/wiki/PKCS_11) is a standard API for cryptographic tokens. It is used by many applications to access cryptographic tokens such as smart cards and hardware security modules (HSM).
+            - `note`: PKCS#11 v3.0 is the latest version of the standard. It is a major update to the standard. It adds support for modern crypto such as EdDSA, Edwards curve, Curve25519 on top of the existing RSA, ECDSA, AES, SHA, etc.
         - [KMIP](https://en.wikipedia.org/wiki/Key_Management_Interoperability_Protocol) is a standard API for key management services. It is used by many applications to access key management services.
         - [IPC](https://en.wikipedia.org/wiki/Inter-process_communication) If isolation is achieved through processes, then the application and the key management service can communicate through IPC. 
         - `REST` - Some secret management systems use REST APIs to access key management services. [HashiCorp Vault](https://www.vaultproject.io/) is an example of such a system.
@@ -70,8 +71,8 @@ A conceptual design such as this does **NOT** try to take into account the speci
         }
 
         BiRel(user, app, "uses", "User Input")
-        BiRel(app, owallet, "uses", "Universal API")
-        BiRel(owallet, localKMS, "uses", "PKCS#11")
+        BiRel(app, owallet, "uses", "Universal Wallet API")
+        BiRel(owallet, localKMS, "uses", "PKCS#11 v3.0")
         BiRel(owallet, remoteKMS, "uses", "KMIP, WebKMS")
 
         UpdateRelStyle(app, owallet, $textColor="green", $lineColor="blue", $offsetX="-90")
