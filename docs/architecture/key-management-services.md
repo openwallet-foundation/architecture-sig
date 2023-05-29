@@ -8,6 +8,8 @@ This document describes conceptually the relationship between application and ke
 
 ## KMS Principles
 
+- **Crypto agility**: The KMS should be able to support a wide range of crypto primitives. It should be able to support legacy crypto as well as modern cryptography.
+
 - **Isolation**: The application and the key management service are isolated from each other. The application should not be able to access the key management service directly or shared runtime resources. The application run-time space should be considered **UNTRUSTED**.
     
     - Isolation Strategies:
@@ -50,6 +52,29 @@ A conceptual design such as this does **NOT** try to take into account the speci
     - Browser Extensions
     - Desktop versions
 
+## Hardware Support
+
+This section intends to list crypto primitives that are normally supported by most hardware devices (i.e phones, laptops, etc). We are excluding cryptocurrency specific hardware devices (i.e Ledger, Trezor, etc) from this list as they are **not** interoperable. 
+
+The usual expected support for crypto primitives are: 
+
+- RSA (2048, 4096 bit size keys)
+- ECDSA
+    - 224, 256, 384, and 521-bit key support are supported, using the NIST P-224, P-256, P-384, and P-521 curves, respectively
+
+- AES
+    - 128, 256-bit keys
+    - CBC, CTR, ECB, and GCM
+
+- HMAC, SHA-256
+
+There can be some variations in the support of these crypto primitives, hashing functions and key sizes, depending on the hardware device and manufacturer.
+
+### References
+
+- [Android Keystore System](https://source.android.com/docs/security/features/keystore/features#primitives)
+- [iOS Enclave](https://developer.apple.com/documentation/cryptokit/secureenclave#using-the-secure-enclave)
+    - note: iOS supports Curve25519 and EdDSA but is **NOT** hardware backed. **Only** NIST P-256 is hardware backed.
 
 ## Conceptual High Level Design
 
