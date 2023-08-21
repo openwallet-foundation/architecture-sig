@@ -78,6 +78,10 @@ There can be some variations in the support of these crypto primitives, hashing 
 
 ## Conceptual High Level Design
 
+### Hardware Operations
+
+By hardware we are referring to TPMs, HSMs, Smart Cards and / or security keys.
+
 ```mermaid
     C4Context
         title App & KMS Services relationship
@@ -106,6 +110,121 @@ There can be some variations in the support of these crypto primitives, hashing 
 
         UpdateLayoutConfig($c4ShapeInRow="1", $c4BoundaryInRow="0")
 
+```
+
+### Non-Hardware Operations
+
+Given that a wallet maybe be deployed or installed in a OS or environment that does not have hardware available that can provide all the cryptographic operations needed, we need to consider a non-hardware mode of operation.
+
+Given the [**principles**](#kms-principles) we have defined, particularly the `isolation` principle, we need to consider a way to achieve isolation in a non-hardware environment. 
+
+Because we are dependent on the run-time environment to provide isolation, we should consider OS'es specifics and their capabilities in order to achieve a secure design.
+
+#### Standard Web3 Design
+
+```mermaid
+    C4Context
+        title "Non isolated KMS & App"
+        Boundary(b0, "Android", "OS") {
+            Boundary(b1, "Wallet", "Main process") {
+                System(app, "OWF Engine", "wallet")
+                System(kms, "KMS", "Key Management Service")
+
+            }
+
+            BiRel(app, kms, "uses", "Shared Memory")
+        }
+
+        UpdateRelStyle(app, kms, $textColor="green", $lineColor="blue", $offsetX="10")
+        UpdateLayoutConfig($c4ShapeInRow="1", $c4BoundaryInRow="0")
+```
+
+##### Problem with Shared Run-time space
+- Shared resources
+- Permissions to the app open attack surface
+- No compartmentalization of a breach or zero-day exploit
+Non compliant with some security industry standards and regulations where separation of duties is a must
+- Breaks isolation principle
+
+
+##### Precedence for software based enclaves
+
+There's already precendence outside of web3 for software-only based enclaves. For example:
+- [HashiCorp Vault](https://www.vaultproject.io/)
+- [softHSM](https://www.opendnssec.org/softhsm/)
+- [Apple CryptoKit](https://developer.apple.com/documentation/cryptokit)
+    - note: Only NIST P-256 is hardware backed. Curve25519 and EdDSA are **NOT** hardware backed.
+
+
+#### Isolation Strategies
+
+- Virtualization
+- Containers
+- Separate Applications
+- Processes & Services
+- Trusted Execution Environments
+
+```mermaid
+    C4Context
+        title "Isolation KMS & App"
+        Boundary(b0, "Android", "OS") {
+            Boundary(b1, "Wallet", "Main process") {
+                System(app, "OWF Engine", "wallet")
+            }
+
+            Boundary(b2, "KMS", "Isolated Service") {
+                System(kms, "KMS", "Key Management Service")
+            }
+
+            BiRel(app, kms, "uses", "IPC")
+        }
+
+        UpdateRelStyle(app, kms, $textColor="green", $lineColor="blue", $offsetX="0")
+        UpdateLayoutConfig($c4ShapeInRow="1", $c4BoundaryInRow="0")
+
+```
+
+#### Key Material Handling
+
+- Use device bound hardware for encryption / decryption
+- At rest encryption with native support through TEE & phone’s native HSM 
+- At run-time decrypt only necessary keys
+- The application is blind to any private key material and should only request operations from the KMS. Operations can be (not excluded to):
+    - Key-gen
+    - Get-publicKey
+    - Sign
+    - Key-derive
+    - Key-import 
+    - etc
+
+```mermaid
+    C4Context
+        title "Isolation KMS & App"
+            Boundary(b0, "Android", "OS") {
+            
+                Boundary(b1, "Application", "Main process") {
+                    System(ow, "OWF Engine", "Wallet")
+                }
+                
+                Boundary(b2, "KMS", "ISOLATED SERVICE") {
+                    Component(ipcClientHandler, "KMS Service", "Service", "Isolated kms")
+                    ComponentDb(kmsDb, "keyStorage", "Database","Encrypted Keystore")
+                }
+                
+                Component(tee, "TEE", "TEE","Trusted Execution Environment")
+                Component(hsm, "HSM", "HSM","Hardware Security Module")
+
+                Rel(ow, ipcClientHandler, "uses", "IPC")
+                Rel(ipcClientHandler, tee, "uses", "SDK")
+                Rel(tee, hsm, "uses", "PKCS#11 v3.0")
+                Rel(ipcClientHandler, kmsDb, "uses", "DB")
+            }
+
+        UpdateRelStyle(ow, ipcClientHandler, $textColor="green", $lineColor="blue", $offsetY="-30")
+        UpdateRelStyle(ipcClientHandler, tee, $textColor="green", $lineColor="blue", $offsetY="-20")
+        UpdateRelStyle(tee, hsm, $textColor="green", $lineColor="blue", $offsetX="-35")
+        UpdateRelStyle(ipcClientHandler, kmsDb, $textColor="green", $lineColor="blue", $offsetY="-20")
+        UpdateLayoutConfig($c4ShapeInRow="3", $c4BoundaryInRow="2")
 ```
 
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
