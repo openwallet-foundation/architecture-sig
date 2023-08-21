@@ -227,4 +227,17 @@ There's already precendence outside of web3 for software-only based enclaves. Fo
         UpdateLayoutConfig($c4ShapeInRow="3", $c4BoundaryInRow="2")
 ```
 
+#### OS Specifics
+
+The examples above are conceptual designs and not **prescriptive**. We need to consider the specifics of the OS we are running on. For example,
+
+- Android
+    - Supports isolated services
+    - Lifecycle control
+    - Natural sandboxing between apps
+    - TEE + HSM available for at-rest / transit encryption
+- iOS
+    - Isolated services seem to be only possible through Scheduled Tasks (https://developer.apple.com/documentation/backgroundtasks) 
+    - Besides the traditional NIST crypto; Apple has native support for Curve25519,EdDSA, ECDH, xchacha20 symmetric encryption scheme
+
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
