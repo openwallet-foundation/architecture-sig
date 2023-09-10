@@ -164,6 +164,8 @@ There's already precendence outside of web3 for software-only based enclaves. Fo
 - Processes & Services
 - Trusted Execution Environments
 
+##### High Level Conceptual Design
+
 ```mermaid
     C4Context
         title "Isolation KMS & App"
@@ -197,9 +199,18 @@ There's already precendence outside of web3 for software-only based enclaves. Fo
     - Key-import 
     - etc
 
+##### Encryption at rest methods
+- Hardware backed Symmetric key: Applications can choose to encrypt their key stores and / or data directly with a hardware backed key bound to the device.
+
+- Key Wrapping: Encrypt symmetric keys with another hardware backed key. The application can then store the encrypted key in a database or file. The application can then decrypt the key when needed. This can be done through native TEE's or local secure element in the device.
+
+- Key Aggrement: Applications can choose to use key agreement schemes to derive a symmetric key (i.e ECDH) that is used to encrypt & decrypt it's keysores and / or data.
+
+###### KMS Isolated Service Detailed Relationships
+
 ```mermaid
     C4Context
-        title "Isolation KMS & App"
+        title "Isolation KMS, App, TEE and hardware"
             Boundary(b0, "Android", "OS") {
             
                 Boundary(b1, "Application", "Main process") {
