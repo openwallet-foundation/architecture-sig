@@ -219,7 +219,7 @@ There's already precendence outside of web3 for software-only based enclaves. Fo
                 
                 Boundary(b2, "KMS", "ISOLATED SERVICE") {
                     Component(ipcClientHandler, "KMS Service", "Service", "Isolated kms")
-                    ComponentDb(kmsDb, "keyStorage", "Database","Encrypted Keystore")
+                    ComponentDb(kmsDb, "keyStorage", "Database", "Encrypted Keystore")
                 }
                 
                 Component(tee, "TEE", "TEE","Trusted Execution Environment")
