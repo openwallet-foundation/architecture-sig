@@ -222,8 +222,8 @@ There's already precendence outside of web3 for software-only based enclaves. Fo
                     ComponentDb(kmsDb, "keyStorage", "Database", "Encrypted Keystore")
                 }
                 
-                Component(tee, "TEE", "TEE","Trusted Execution Environment")
-                Component(hsm, "HSM", "HSM","Hardware Security Module")
+                Component(tee, "TEE", "TEE", "Trusted Execution Environment")
+                Component(hsm, "HSM", "HSM", "Hardware Security Module")
 
                 Rel(ow, ipcClientHandler, "uses", "IPC")
                 Rel(ipcClientHandler, tee, "uses", "SDK")
