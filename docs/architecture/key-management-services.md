@@ -114,7 +114,7 @@ By hardware we are referring to TPMs, HSMs, Smart Cards and / or security keys.
 
 ### Non-Hardware Operations
 
-Given that a wallet maybe be deployed or installed in a OS or environment that does not have hardware available that can provide all the cryptographic operations needed, we need to consider a non-hardware mode of operation.
+Given that a wallet may be deployed or installed in a OS or environment that does not have hardware available that can provide all the cryptographic operations needed, we need to consider a non-hardware mode of operation.
 
 Given the [**principles**](#kms-principles) we have defined, particularly the `isolation` principle, we need to consider a way to achieve isolation in a non-hardware environment. 
 
