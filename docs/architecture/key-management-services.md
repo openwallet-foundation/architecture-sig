@@ -143,7 +143,7 @@ Because we are dependent on the run-time environment to provide isolation, we sh
 - Shared resources
 - Permissions to the app open attack surface
 - No compartmentalization of a breach or zero-day exploit
-Non compliant with some security industry standards and regulations where separation of duties is a must
+- Non compliant with some security industry standards and regulations where separation of duties is a must
 - Breaks isolation principle
 
 
