@@ -22,7 +22,7 @@ A Door-dash employee is given a package to deliver that is either valuable or in
 
 ### Customs and Border Patrol Agent
 
-A government employee on duty sees a person access an area that requires explicit permission. The hold and employee hold up their devices. The holder can see the authority for the request on their own device and decides to provide the data request. While it is illegal to present false government credentials, this sort of attack can be hard to track back to an individual presenting false credentials.
+A government employee on duty sees a person access an area that requires explicit permission. The holder and employee hold up their devices. The holder can see the authority for the request on their own device and decides to provide the data request. While it is illegal to present false government credentials, this sort of attack can be hard to track back to an individual presenting false credentials.
 
 ## Problems
 
