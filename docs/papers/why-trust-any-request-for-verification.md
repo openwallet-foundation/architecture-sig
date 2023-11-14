@@ -26,7 +26,7 @@ A government employee on duty sees a person access an area that requires explici
 
 ## Problems
 
-The holder of the device must trust the packet of information that is sent to their device by the verifier with very little evidence from the real world to help inform their decision. This is new ground, and the user experience must be acceptable to the holder and the security mut be accepted by both parties.
+The holder of the device must trust the packet of information that is sent to their device by the verifier with very little evidence from the real world to help inform their decision. This is new ground, and the user experience must be acceptable to the holder and the security must be accepted by both parties.
 
 ### Privacy
 
