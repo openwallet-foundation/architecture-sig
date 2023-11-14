@@ -64,7 +64,7 @@ The badge given by a sovereign entity to any employee carrying out the laws of t
 
 ### First Responders on the job
 
-In the case of King County in the State of Washington, an emergency physician is employed by the county that has the authority to issue access tokens to Emergency Medical Technicians (EMTs) to apply medical procedures to patients that a non-responsive. These permissions apply only to that individual during the time on duty.
+In the case of King County in the State of Washington, an emergency physician is employed by the county that has the authority to issue access tokens to Emergency Medical Technicians (EMTs) to apply medical procedures to patients that are non-responsive. These permissions apply only to that individual during the time on duty.
 
 ### Bank Payment systems
 
