@@ -80,20 +80,20 @@ Proposals for regulations have been posted and responses made from, among others
 
 ## Data Flows
 
-1. The holder of a mobile device comes to a place where access of some asset requires that the holder, or the subject of a credential, must justify their right to access the resource.
-2. Each the holder and the verifier must recognize the type of credential required and have the appropriate wallet and verification app running. For the holder of the wallet this might be a challenge unless the verifier provides some sort of indication to help the user. – It could be the active wallet on that channel can determine if it can cope with the verifier or help the user select
+1. The holder of a mobile device comes to a place where access to some asset requires that the holder, or the subject of a credential, must justify their right to access the resource.
+2. Each one, the holder, and the verifier, must recognize the type of credential required and have the appropriate wallet and verification app running. For the holder of the wallet this might be a challenge unless the verifier provides some sort of indication to help the user. – It could be the active wallet on that channel can determine if it can cope with the verifier or help the user select
 3. The verifier and the holder hold their devices in close proximity and some communication protocol carries the request of the verifier with sufficient information to convince the holder to release their own data to the verifier.
-4. It is here assumed that that verifier agent holding the device needs to provide the holder of the need for the information and of their authority to require the information. The purpose of the request is made clear in the data flow along with a signed request that the holder can use to determine the how, what, where and why of the request made (called the receipt).
+4. It is here assumed that the verifier agent holding the device needs to provide the holder of the need for the information and of their authority to require the information. The purpose of the request is made clear in the data flow along with a signed request that the holder can use to determine the how, what, where and why of the request made (called the receipt).
 5. The holder's device has been provisioned with an application (called a wallet) installed on their device which has the information to prove their access to the resource.
 6. The Wallet creates a User Experience (described below) with a choice button, and possibly some options for optional data.
 7. The holder gestures their acceptance of the terms.
 8. The Wallet now stores the receipt from the verifier with their response for future reference.
 
-Assumptions: communications are secure. Above assumes holder is subject. There is no phone-home. The wallet contains some sort of core list of trusted entities to make a consent decision.
+Assumptions: communications are secure. The above assumes the holder is the subject. There is no phone-home. The wallet contains some sort of core list of trusted entities to make a consent decision.
 
 The wallet needs the capability to express all that it can to the user to make an informed decision.
 
-Device capability needs to be expressed. Different user's have different phones.
+Device capability needs to be expressed. Different users have different phones.
 
 ## User Experiences
 
@@ -107,7 +107,7 @@ The receipt of the request provided by the verifier to the user must be sufficie
 6. The recourse to the verifier for validation of information collected.
 7. A set of opt-in data elements that are above and beyond the purpose of the request.
 8. The gesture required to indicate consent to release data to allow access to the resource
-9. Access to full details of the terms and conditions for the people that really need to know.
+9. Access to full details of the terms and conditions for the people who really need to know.
 
 ## Notes and Conclusions
 
@@ -115,6 +115,6 @@ ISO 18013-5 required the issuer to verify the governance of the wallet and of th
 
 The assumption for these use cases is that all transactions happen with one request and one response. That means that no consideration was given to the creation of a session between the devices. In more complex cases such a session creation might produce a better user experience, or it might prolong the decision-making process to the point where the user gets really annoyed or just gives up the whole concept of digital identifiers and goes back to paper credentials.
 
-Since these use cases focus on just the wallet and the verifier, more complex cases like those found in browser interactions with web sites using single-sign-on (SSO) protocols are not discussed. It would still be possible to continue a protocol interaction with just the wallet and verifier, but any authentication process would remain local to those two entities. In other words, these interactions mimic those found in real world wallets, not those in complex web site navigations.
+Since these use cases focus on just the wallet and the verifier, more complex cases like those found in browser interactions with websites using single-sign-on (SSO) protocols are not discussed. It would still be possible to continue a protocol interaction with just the wallet and verifier, but any authentication process would remain local to those two entities. In other words, these interactions mimic those found in real world wallets, not those in complex website navigations.
 
 Given the above limitations, these example use cases do show the way to provide sufficient information to the wallet holder to make informed trust decisions about the verifier that can carry forward to more complex transactions.
