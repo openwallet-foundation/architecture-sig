@@ -10,7 +10,7 @@ Credit: Concepts for Secure Wallets in Decentralised Identity Ecosystems[https:/
 ## Three-party digital identity model
 
 ### main
-![Three-party digital identity model](https://github.com/Entidad/architecture-sig/blob/main/docs/architecture/discussions/diagrams/drawio/screenshots/three-party-digital-identity-model_main.png)
+![Three-party digital identity model](https://github.com/Entidad/architecture-sig/blob/main/docs/architecture/discussions/screenshots/Three-party_digital_identity_model.drawio.png)
 
 #### Diagrams inspired by
 1. [AnonCreds Specification / Hyperledger Foundation](https://hyperledger.github.io/anoncreds-spec)
@@ -20,17 +20,12 @@ Credit: Concepts for Secure Wallets in Decentralised Identity Ecosystems[https:/
 5. [Silicon Valley Innovation Program - Privacy Preserving Digital Credential Wallets & Verifiers / DHS](https://s3.amazonaws.com/uploads.webconnex.com/39818%2F1692286391245-DHS+SVIP+Digital+Wallets+Industry+Day+Presentation.pdf)
 6. [A Trust Layer for the Internet is Emerging](https://www.cira.ca/uploads/2023/12/2023_A-trust-layer-for-the-internet-is-emerging_-report-%E2%80%93-Continuum_CIRA.pdf)
 
-### annotated
-![Three-party digital identity model - annotated](https://github.com/Entidad/architecture-sig/blob/main/docs/architecture/discussions/diagrams/drawio/screenshots/three-party-digital-identity-model_annotated.png)
+#### Digital identity ecosytem roles
+![Ecosystem roles](https://github.com/Entidad/architecture-sig/blob/main/docs/architecture/discussions/screenshots/digital_identity_ecosystem_roles.drawio.png)
 
-#### holder
-![Wallet holder](https://github.com/Entidad/architecture-sig/blob/main/docs/architecture/discussions/diagrams/drawio/screenshots/three-party-digital-identity-model_holder.png)
 
-#### human-centric
-![Wallet provider role](https://github.com/Entidad/architecture-sig/blob/main/docs/architecture/discussions/diagrams/drawio/screenshots/three-party-digital-identity-model_walletprovider.png)
-
-#### interaction models
-![Wallet interaction modes](https://github.com/Entidad/architecture-sig/blob/main/docs/architecture/discussions/diagrams/drawio/screenshots/wallet-interaction-modes.png)
+#### Wallet interaction modes
+![Wallet interaction modes](https://github.com/Entidad/architecture-sig/blob/main/docs/architecture/discussions/screenshots/digital_trust_interaction_modes.drawio.png)
 
 #### Wallet app system architecture
-![OpenWallet system architecture](https://github.com/Entidad/architecture-sig/blob/main/docs/architecture/discussions/diagrams/drawio/screenshots/wallet-app-system-architecture.png)
+![OpenWallet system architecture](https://github.com/Entidad/architecture-sig/blob/main/docs/architecture/discussions/screenshots/Native_wallet_app.drawio.png)
