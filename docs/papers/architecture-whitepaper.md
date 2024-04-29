@@ -51,7 +51,7 @@
     
 ## Introduction
 
-The Universal Wallet Reference Architecture whitepaper describes an architecture for a universal B2C wallet -- that is, one that supports identity, objects (e.g., tokens, tickets), and money (e.g., credit cards and other financial instruments). In this paper, we will begin by providing background on why a universal wallet is needed. Next, we will explore some typical requirements (both functional and non-functional) for a universal wallet. Next, we will expand on a set of principles that will be used when making decisions about the architecture. The paper will then document a conceptual architecture that shows the key components and how we expect them to interact with each other. We will follow this with an information model of the entities that interact with a wallet. Lastly, we will explore the logical architecture, which includes the technical capabilities that we expect will be needed to support the requirements of a universal wallet, as well as a set of enablers that might accelerate the implementation of a universal wallet.
+The Universal Wallet Reference Architecture whitepaper describes an architecture for a universal B2C wallet -- that is, one that supports identity, objects (e.g., tokens, tickets), and money (e.g., credit cards and other financial instruments). In this paper, we will begin by providing background on why a universal wallet is needed. Next, we will explore some typical requirements (both functional and non-functional) for a universal wallet. Next, we will expand on a set of principles that will be used when making decisions about the architecture. The paper will then document a conceptual architecture that shows the key components and how we expect them to interact with each other. We will follow this with an information model of the entities that interact with a wallet. We will then explore the logical architecture, which includes the technical capabilities that we expect will be needed to support the requirements of a universal wallet. Lastly, we will look at a set of enablers that might accelerate the implementation of a universal wallet.
 
 The audience of this paper are developers and architects wishing to use or create open-source wallets and components. Although, there are other readers of this document that may be interested in the general concepts of universal wallets.
 
@@ -72,6 +72,8 @@ Where we want to get to is a place where we have multi-purpose digital wallets (
 
 ## Requirements
 
+In this section, we will explore a high-level set of functional requirements, some use cases for different industries, and a set of business features that are needed for a universal wallet. This section should be considered illustrative and not exhaustive.
+
 ### Functional Requirements
 A **functional requirement** defines specific behaviors or functions.
 
@@ -79,7 +81,7 @@ A **functional requirement** defines specific behaviors or functions.
 - Storing data (e.g., travel documents, verifiable credentials)
 - Connecting to multiple networks (e.g., cryptocurrencies, stable coins, blockchain, payment, credit card, CDBC, bank)
 - Digital asset inventory management
-- Authenticating with the wallet to access services (reword)
+- Authenticating with the wallet to access services
 - Secure access to wallet
 - Self custody as well as custodial solution
 - Consent for data sharing
@@ -158,7 +160,7 @@ The following is a non-exhaustive list of use cases by industry:
 
 ### Non-Functional Requirements
 
-A **non-functional requirement** is a requirement that specifies criteria that can be used to judge the operation of a system, rather than specific behaviors.
+A **non-functional requirement** is a requirement that specifies criteria that can be used to judge the operation of a system, rather than specific behaviors. The NFRs included in this document should be considered illustrative and should be carefully considered for each specific physical architecture and implementation.
 
 #### Functional Suitability
 This characteristic represents the degree to which a product or system provides functions that meet stated and implied needs when used under specified conditions.
@@ -338,6 +340,7 @@ A **conceptual architecture** is a high-level diagram that shows the relationshi
 
 ![Conceptual Architecture](./images/conceptual-architecture.png "Conceptual Architecture")
 
+The following are the key components that we expect to be available in a universal wallet:
 - **Channels** - A wallet should support multiple channels. Consider whether each channel is a separate wallet or if there are requirements to share the same data across multiple channels.
 - **Policy Engine** - Different rulesets will determine what is available for use from the wallet. 
 - **Interface** - This is a sampling of interfaces needed to support a universal wallet.
