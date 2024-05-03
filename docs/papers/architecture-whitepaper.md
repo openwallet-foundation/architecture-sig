@@ -51,7 +51,9 @@
     
 ## Introduction
 
-The Universal Wallet Reference Architecture whitepaper describes an architecture for a universal B2C wallet -- that is, one that supports identity, objects (e.g., tokens, tickets), and money (e.g., credit cards and other financial instruments). In this paper, we will begin by providing background on why a universal wallet is needed. Next, we will explore some typical requirements (both functional and non-functional) for a universal wallet. Next, we will expand on a set of principles that will be used when making decisions about the architecture. The paper will then document a conceptual architecture that shows the key components and how we expect them to interact with each other. We will follow this with an information model of the entities that interact with a wallet. We will then explore the logical architecture, which includes the technical capabilities that we expect will be needed to support the requirements of a universal wallet. Lastly, we will look at a set of enablers that might accelerate the implementation of a universal wallet.
+The Universal Wallet Reference Architecture whitepaper describes an architecture for a universal B2C wallet -- that is, one that supports identity, objects (e.g., tokens, tickets), and money (e.g., credit cards and other financial instruments). It is important to note that the architecture described in this document does not assume a particular technology or delivery mechanism for the wallet.
+
+In this paper, we will begin by providing background on why a universal wallet is needed. Next, we will explore some typical requirements (both functional and non-functional) for a universal wallet. Next, we will expand on a set of principles that will be used when making decisions about the architecture. The paper will then document a conceptual architecture that shows the key components and how we expect them to interact with each other. We will follow this with an information model of the entities that interact with a wallet. We will then explore the logical architecture, which includes the technical capabilities that we expect will be needed to support the requirements of a universal wallet. Lastly, we will look at a set of enablers that might accelerate the implementation of a universal wallet.
 
 The audience of this paper are developers and architects wishing to use or create open-source wallets and components. Although, there are other readers of this document that may be interested in the general concepts of universal wallets.
 
@@ -701,6 +703,7 @@ sequenceDiagram
 
 ###### Considerations
 - **Key Isolation vs. Transferability** - If the keys relevant to the identity, money, and objects are isolated via [secure storage](#secure-storage) (i.e., Secure Enclave) of the mobile device, those inventory items cannot be transferred to another device since the keys for creating transactions for those items cannot be transferred from the device of origin. 
+- **Key Recovery** - There are a number of key recovery patterns that exist, including social recovery, self recovery (seed phrase), [decentralized recovery](https://derecalliance.org/), and custodial recovery. 
 - **Self-custody vs. Custodial Wallet** - Transfer and recovery options can be different for self-custody and custodial wallets. For the self-custody wallets, backup and recovery is in the responsibility of the user whereas for custodial wallets, traditional recovery approaches such as password recovery can be taken. 
 - **Security** - In the case of self-custody wallets, transfer between devices must adhere to security best practices for data transfer between proximity devices.
 
@@ -1494,11 +1497,11 @@ The **Secure Storage** layer specifies services related to the storage of keys, 
 
 ###### Sub-capabilities
 - **Status Management** - Ability to expose and manage the revocation status and expiration dates of the credential.
-- **Schema and Definition Retrieval** - Ability to retrieve the credential schemas and definitions from the verifiable data registry or the linked data.
+- **Schema and Definition Retrieval** - Ability to retrieve the credential schemas and definitions from the trust registry or the linked data.
 - **Encrypted Data Storage** - Ability to store the credentials in an encrypted format (see [Data Storage](#data-storage) capability for more information).
 
 ###### Considerations
-- **Portability** Credential types necessitating cryptographic proof of ownership require a synchronized approach to credential portability and key recovery. This alignment is essential for scenarios like disaster recovery or transitioning to another device, as the holder must access their keys or secrets to present proof during verifier interactions. When keys for cryptographic proof of ownership reside in a hardware secure module and cannot be transferred to another device, credentials tied to those keys become non-functional on a different device, given the inability to establish proof of ownership.
+- **Portability** Credential types necessitating cryptographic proof of ownership require a synchronized approach to credential portability and key recovery. This alignment is essential for scenarios like disaster recovery or transitioning to another device, as the holder must access their keys or secrets to present proof during verifier interactions. When keys for cryptographic proof of ownership reside in a hardware secure module and cannot be transferred to another device, credentials tied to those keys (such as governmental identity credentials) become non-functional on a different device, given the inability to establish proof of ownership.
 - **Lifecycle Management** It is important to consider the whole lifecycle of credentials – from issuance to presentation, expiry, or revocation. The storage system should support updates and deletions. Furthermore, credentials should be stored while adhering to privacy best-practices such as encryption. 
 - **Linked Data and Semantic Interoperability** Some credential formats support structured data, as well as semantic interoperability to better understand the contents of the credential. As such, the storage system should expose this information for better representation and querying by the wallet owner.
 
@@ -1667,6 +1670,7 @@ A **Technology Enabler** facilitates the implementation of the overall solution
 ### Cross Cutting Enablers
 - HTTPS/TLS
 - Public Key Cryptography
+- [Decentralized Key Recovery Protocols](https://derecalliance.org/)
 - Zero-Knowledge Proofs
 - Near Field Communication
 - Bluetooth Low-Energy
@@ -1676,6 +1680,8 @@ A **Technology Enabler** facilitates the implementation of the overall solution
 - Secure Enclaves (TEE)
 - Hardware Security Modules
 - Biometrics
+- OAuth/OpenID Connect
+- FIDO2/Client-to-Authenticator Protocol (CTAP)
 - Trusted Service Managers (TSM)
 
 ### Identity Enablers
