@@ -1695,6 +1695,7 @@ A **Technology Enabler** facilitates the implementation of the overall solution
     - SD-JWT
 - P2P Protocols
     - DIDComm
+    - WebRTC
 - Data Exchange Protocols
     - OID4VC
     - VC-API
