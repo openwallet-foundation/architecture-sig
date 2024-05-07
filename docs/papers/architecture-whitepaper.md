@@ -43,11 +43,11 @@
         - [Secure Storage](#secure-storage)
         - [Network Services](#network-services)
         - [P2P Services](#p2p-services)
-    - [Technology Enablers](#technology-enablers)
-        - [Cross Cutting Enablers](#cross-cutting-enablers)
-        - [Identity Enablers](#identity-enablers)
-        - [Objects Enablers](#objects-enablers)
-        - [Money Enablers](#money-enablers)
+- [Technology Enablers](#technology-enablers)
+    - [Cross Cutting Enablers](#cross-cutting-enablers)
+    - [Identity Enablers](#identity-enablers)
+    - [Objects Enablers](#objects-enablers)
+    - [Money Enablers](#money-enablers)
     
 ## Introduction
 
