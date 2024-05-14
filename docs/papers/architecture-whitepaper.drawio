@@ -1,4 +1,4 @@
-<mxfile host="Electron" modified="2024-05-06T16:07:13.699Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.2.5 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="MwB_wOYUUAL2dyAsStDC" version="24.2.5" type="device" pages="19">
+<mxfile host="Electron" modified="2024-05-14T14:34:01.040Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.2.5 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="3rgN43fU_2y-eJfjXwDu" version="24.2.5" type="device" pages="19">
   <diagram id="YuwW2QPEV3Vv_fNfShuG" name="use-cases">
     <mxGraphModel dx="1114" dy="769" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -154,7 +154,7 @@
         <mxCell id="o3gX5yTOlguHBpYPG_WA-55" value="Energy Credits" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="695" y="203" width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="o3gX5yTOlguHBpYPG_WA-56" value="Emission Credigts" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="o3gX5yTOlguHBpYPG_WA-56" value="Emission Credits" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="695" y="248" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="o3gX5yTOlguHBpYPG_WA-57" value="Quality Management" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
