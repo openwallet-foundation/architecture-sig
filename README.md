@@ -4,6 +4,7 @@ This special interest group (SIG) is focused on conversations related to the arc
 ## Links
 * [Use Cases](./docs/use-cases/use-cases.md)
   * [Event Use Case](./docs/use-cases/event-use-case.md)
+  * [Notary Seal Case](https://tcwiki.azurewebsites.net/index.php?title=Notary_Seal)
 * [Conceptual Architecture](./docs/architecture/conceptual-architecture.md)
 * Class Diagrams
   * [Cryptocurrencies](./docs/architecture/crypto-currencies.md)
