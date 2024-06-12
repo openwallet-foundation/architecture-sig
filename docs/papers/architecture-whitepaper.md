@@ -48,7 +48,7 @@
     - [Identity Enablers](#identity-enablers)
     - [Objects Enablers](#objects-enablers)
     - [Money Enablers](#money-enablers)
-- [OpenWallet Foundation Project Maps][#openwallet-foundation-project-maps]
+- [OpenWallet Foundation Project Maps](#openwallet-foundation-project-maps)
     - [Credo](#credo)
     
 ## Introduction
