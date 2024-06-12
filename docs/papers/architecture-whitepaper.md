@@ -1726,7 +1726,7 @@ In this section we will provide project maps for each of the OpenWallet Foundati
 
 ### Credo
 
-Credo originated as a project named "Aries Framework JavaScript" under the Hyperledger Aries umbrella. It has since been migrated from the Hyperledger Foundation to the OpenWallet Foundation and rebranded as Credo. As a result of its origin and strong ties to the Hyperledger community, a significant portion of its codebase adheres to Hyperledger Aries standards (RFCs), and the code and documentation make references to other Hyperledger-related projects.
+[Credo](https://github.com/openwallet-foundation/credo-ts) originated as a project named "Aries Framework JavaScript" under the Hyperledger Aries umbrella. It has since been migrated from the Hyperledger Foundation to the OpenWallet Foundation and rebranded as Credo. As a result of its origin and strong ties to the Hyperledger community, a significant portion of its codebase adheres to Hyperledger Aries standards (RFCs), and the code and documentation make references to other Hyperledger-related projects.
 
 > Hyperledger Aries provides a shared, reusable, interoperable tool kit designed for initiatives and solutions focused on creating, transmitting and storing verifiable digital credentials.
 > 
@@ -1734,6 +1734,6 @@ Credo originated as a project named "Aries Framework JavaScript" under the Hyper
 
 There are [several](https://wiki.hyperledger.org/display/ARIES) other Aries-based frameworks that help you build solutions using verifiable credentials. This one is written in TypeScript and is specifically well suited for Multi-Platform development as it supports Node.js and React Native.
 
-**NOTE: This map was created by the architecture SIG community and must be confirmed by the Credo maintainers.**
+**NOTE: This map was created by the architecture SIG and must be confirmed by the Credo maintainers.**
 
 ![Credo Map](./images/credo-map.png "Credo Map")
