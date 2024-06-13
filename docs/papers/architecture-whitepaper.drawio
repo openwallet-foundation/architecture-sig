@@ -1969,7 +1969,7 @@
                 <mxCell id="UgF41YkS1zavMJ_1dJ5h-19" value="Inventory" style="rounded=0;whiteSpace=wrap;html=1;fontSize=9;fillStyle=auto;glass=0;shadow=0;direction=north;portConstraintRotation=0;portConstraint=none;backgroundOutline=0;comic=0;gradientDirection=west;fillColor=#d5e8d4;strokeColor=#82b366;" parent="UgF41YkS1zavMJ_1dJ5h-14" vertex="1">
                     <mxGeometry x="5" y="95" width="60" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="UgF41YkS1zavMJ_1dJ5h-20" value="Notifications" style="rounded=0;whiteSpace=wrap;html=1;fontSize=9;fillStyle=auto;glass=0;shadow=0;direction=north;portConstraintRotation=0;portConstraint=none;backgroundOutline=0;comic=0;gradientDirection=west;" parent="UgF41YkS1zavMJ_1dJ5h-14" vertex="1">
+                <mxCell id="UgF41YkS1zavMJ_1dJ5h-20" value="Notifications" style="rounded=0;whiteSpace=wrap;html=1;fontSize=9;fillStyle=auto;glass=0;shadow=0;direction=north;portConstraintRotation=0;portConstraint=none;backgroundOutline=0;comic=0;gradientDirection=west;fillColor=#d5e8d4;strokeColor=#82b366;" parent="UgF41YkS1zavMJ_1dJ5h-14" vertex="1">
                     <mxGeometry x="132" y="21" width="60" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="UgF41YkS1zavMJ_1dJ5h-21" value="Audit Log" style="rounded=0;whiteSpace=wrap;html=1;fontSize=9;fillStyle=auto;glass=0;shadow=0;direction=north;portConstraintRotation=0;portConstraint=none;backgroundOutline=0;comic=0;gradientDirection=west;" parent="UgF41YkS1zavMJ_1dJ5h-14" vertex="1">
@@ -2098,7 +2098,7 @@
                 <mxCell id="UgF41YkS1zavMJ_1dJ5h-62" value="Inventory Management" style="rounded=0;whiteSpace=wrap;html=1;fontSize=9;fillStyle=auto;glass=0;shadow=0;direction=north;portConstraintRotation=0;portConstraint=none;backgroundOutline=0;comic=0;gradientDirection=west;fillColor=#d5e8d4;strokeColor=#82b366;" parent="UgF41YkS1zavMJ_1dJ5h-1" vertex="1">
                     <mxGeometry x="235" y="396" width="60" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="UgF41YkS1zavMJ_1dJ5h-63" value="Notifications" style="rounded=0;whiteSpace=wrap;html=1;fontSize=9;fillStyle=auto;glass=0;shadow=0;direction=north;portConstraintRotation=0;portConstraint=none;backgroundOutline=0;comic=0;gradientDirection=west;" parent="UgF41YkS1zavMJ_1dJ5h-1" vertex="1">
+                <mxCell id="UgF41YkS1zavMJ_1dJ5h-63" value="Notifications" style="rounded=0;whiteSpace=wrap;html=1;fontSize=9;fillStyle=auto;glass=0;shadow=0;direction=north;portConstraintRotation=0;portConstraint=none;backgroundOutline=0;comic=0;gradientDirection=west;fillColor=#d5e8d4;strokeColor=#82b366;" parent="UgF41YkS1zavMJ_1dJ5h-1" vertex="1">
                     <mxGeometry x="362" y="330" width="60" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="UgF41YkS1zavMJ_1dJ5h-64" value="Connections Management" style="rounded=0;whiteSpace=wrap;html=1;fontSize=9;fillStyle=auto;glass=0;shadow=0;direction=north;portConstraintRotation=0;portConstraint=none;backgroundOutline=0;comic=0;gradientDirection=west;fillColor=#d5e8d4;strokeColor=#82b366;" parent="UgF41YkS1zavMJ_1dJ5h-1" vertex="1">
@@ -2248,7 +2248,7 @@
                 <mxCell id="XWL6dY95AM_609i4K0HI-34" value="Query Notifications" style="rounded=0;whiteSpace=wrap;html=1;" parent="UgF41YkS1zavMJ_1dJ5h-1" vertex="1">
                     <mxGeometry x="55" y="1470" width="120" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="XWL6dY95AM_609i4K0HI-35" value="Add Notification" style="rounded=0;whiteSpace=wrap;html=1;" parent="UgF41YkS1zavMJ_1dJ5h-1" vertex="1">
+                <mxCell id="XWL6dY95AM_609i4K0HI-35" value="Add Notification" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="UgF41YkS1zavMJ_1dJ5h-1" vertex="1">
                     <mxGeometry x="193" y="1470" width="120" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="XWL6dY95AM_609i4K0HI-36" value="Update Notification" style="rounded=0;whiteSpace=wrap;html=1;" parent="UgF41YkS1zavMJ_1dJ5h-1" vertex="1">
@@ -2485,7 +2485,7 @@
                 <mxCell id="xQgRxv-5v4yVZbouMHBQ-30" value="Multi-platform Support" style="rounded=0;whiteSpace=wrap;html=1;" parent="UgF41YkS1zavMJ_1dJ5h-1" vertex="1">
                     <mxGeometry x="55" y="2950" width="120" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="xQgRxv-5v4yVZbouMHBQ-31" value="Push Notifications Integration" style="rounded=0;whiteSpace=wrap;html=1;" parent="UgF41YkS1zavMJ_1dJ5h-1" vertex="1">
+                <mxCell id="xQgRxv-5v4yVZbouMHBQ-31" value="Push Notifications Integration" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="UgF41YkS1zavMJ_1dJ5h-1" vertex="1">
                     <mxGeometry x="193" y="2950" width="120" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="xQgRxv-5v4yVZbouMHBQ-32" value="Webhook Support" style="rounded=0;whiteSpace=wrap;html=1;" parent="UgF41YkS1zavMJ_1dJ5h-1" vertex="1">
