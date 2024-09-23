@@ -1,5 +1,8 @@
+![Status Badge](https://img.shields.io/badge/Status-Working_Draft-blue)
 ![License Badge](https://img.shields.io/badge/license-CC--BY--4.0-green)
 ![Copyright](https://img.shields.io/badge/copyright-Accenture._All_Rights_Reserved._2024---purple)
+
+These materials are a deliverable of the OWF community. If you have concerns or suggestions regarding the content, please file a pull request.
 
 # Universal Wallet Reference Architecture Whitepaper
 
