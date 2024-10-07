@@ -62,6 +62,13 @@ In this paper, we will begin by providing background on why a universal wallet i
 
 The audience of this paper are developers and architects wishing to use or create open-source wallets and components. Although, there are other readers of this document that may be interested in the general concepts of universal wallets.
 
+We expect within the OpenWallet Foundation that this document will be used to understand:
+- What capabilities are supported by each project.
+- Where each project might consider expanding in the future (either through collaboration with another project in OWF or from contributions from the community).
+- Where we might have gaps in the projects that exist within OpenWallet Foundation that the technical community may want to look for specific project contributions.
+
+It is not expected that all OpenWallet Foundation projects will support all the requirements and capabilities listed herein.
+
 Out of scope for this document are the following items:
 - Defining an end-user wallet product, including User Interfaces
 - Defining any sort of technical specification or standard
