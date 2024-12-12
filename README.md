@@ -2,6 +2,7 @@
 This special interest group (SIG) is focused on conversations related to the architecture of digital wallet engines and is a sub-group reporting to the [OpenWallet Foundation's Technical Advisory Committee](https://openwallet-foundation.github.io/tac).
 
 ## Links
+* [Architecture Whitepaper](./docs/papers/architecture-whitepaper.md)
 * [Use Cases](./docs/use-cases/use-cases.md)
   * [Event Use Case](./docs/use-cases/event-use-case.md)
 * [Conceptual Architecture](./docs/architecture/conceptual-architecture.md)
